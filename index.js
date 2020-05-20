@@ -28,7 +28,6 @@ $(".linear-search").on("click", function(event) {
   $("h3").text("Algorithm Running:  Linear Search");
 
   linearSearch(elementToBeSearched);
-  enableButton(".arraygen");
 });
 
 
@@ -42,7 +41,6 @@ $(".binary-search").on("click", function(event) {
 
   binarySearch(elementToBeSearched);
 
-  enableButton(".arraygen");
 });
 
 
@@ -83,6 +81,7 @@ function binarySearch(element) {
           $(".e" + mid).removeClass("bg-purple");
           $(".e" + mid).addClass("bg-green");
           $("h4").text("Element found at index " + mid);
+          enableButton(".arraygen");
         }, 1500);
         flag = 1;
       } else if (arr[mid] < element) {
@@ -108,6 +107,7 @@ function binarySearch(element) {
     }
     if (l > r) {
       $("h4").text("Element not present in the Array");
+      enableButton(".arraygen");
       clearInterval(it);
     }
   }
@@ -128,6 +128,7 @@ function linearSearch(element) {
         $(".e" + i).removeClass("bg-purple");
         $(".e" + i).addClass("bg-green");
         $("h4").text("Element found at index " + i);
+        enableButton(".arraygen");
       }, 1500 * (i + 1));
       flag = 1;
       break;
