@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export function ArrayElement({ element }) {
   const bgColors = {
-    processing: "bg-purple-100",
-    matched: "bg-green-100",
-    unmatched: "bg-red-100",
+    processing: "bg-purple-200",
+    matched: "bg-green-200",
+    unmatched: "bg-red-200",
     unvisited: "bg-slate-100",
   };
-  // console.log(value, status);
+
   return (
     <>
       <div>

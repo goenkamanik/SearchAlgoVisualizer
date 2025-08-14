@@ -1,11 +1,21 @@
 import { useState } from "react";
 
-export function Footer({ reset, linearSearch, binarySearch, disabledFlag }) {
+export function Footer({
+  reset,
+  linearSearch,
+  binarySearch,
+  searching,
+  disabledFlag,
+}) {
   return (
     <>
       <div className="h-[16%] bg-slate-100 py-5">
         <div className="flex justify-center mb-4">
-          <button onClick={reset} className="cursor-pointer">
+          <button
+            onClick={reset}
+            className="cursor-pointer"
+            disabled={searching}
+          >
             <svg
               width="40px"
               height="40px"
